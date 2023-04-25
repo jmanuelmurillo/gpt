@@ -21,7 +21,6 @@ app.get('/', async (req, res) => {
 	});
 });
 
-
 app.post('/', async (req, res) => {
 	try{
 		const prompt = req.body.prompt;
@@ -46,9 +45,9 @@ app.post('/', async (req, res) => {
 		}
 
 	} catch (error){
-		console.log("Eeeeeeeeeeeeeeerror", error);
+		console.log(error);
 		res.status(500).send({error});
 	}
 });
 
-app.listen(443, () => console.log('Server is running on port http://localhost:5050'));
+app.listen(5050, () => console.log('Server is running on port http://localhost:5050'));
