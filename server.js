@@ -36,9 +36,7 @@ app.post('/', async (req, res) => {
 				presence_penalty: 0
 			});
 	
-			res.status(200).send({
-				bot: response.data.choices[0].text
-			});
+			res.status(200).send(response.data.choices[0].text);
 		}
 		else{
 			res.status(400).send({error: "Bad request"});
